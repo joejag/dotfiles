@@ -1,7 +1,7 @@
 GREENY="\[\e[0;32m\]"
-OFF_GREENY="\[\e[1;32m\]"
+BOLD_GREENY="\[\e[1;32m\]"
 BLUEY="\[\e[1;34m\]"
 WHITEY="\[\e[1;37m\]"
 WRAPPER="\[\e[m\]"
 
-PS1="${GREENY}\h${WRAPPER} ${BLUEY}\w${WRAPPER} ${OFF_GREENY}\$${WRAPPER} $WHITEY"
+PS1="${GREENY}\h${WRAPPER} ${BLUEY}\w${WRAPPER} ${BOLD_GREENY}\$${WRAPPER} $WHITEY"
