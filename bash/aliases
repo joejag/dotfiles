@@ -8,9 +8,9 @@ alias h=history
 alias e=$EDITOR
 
 # Don't show groups on long listing
-alias la='ls -lGa --color'
-alias ll='ls -lG --color'
-alias lt='ls -ltG --color'
+alias ll='ls -lG --color'     # long listing
+alias la='ls -lGa --color'    #              with hidden
+alias lt='ls -ltG --color'    #              sorted by latest changed
 
 # grep with color
 alias grep='grep --color'
@@ -20,11 +20,3 @@ alias reload='. ~/.bashrc'
 
 # File size
 alias fs="du -sh"
-
-# share a directory with python
-alias pshare="python -m SimpleHTTPServer 8000"
-
-# share a directory with ruby
-alias rshare="ruby -rubygems -e \"['thin', 'rack', 'socket'].each {|file| require file };"\
-" Thin::Server.start(IPSocket.getaddress(Socket.gethostname), 7777) {"\
-" use Rack::CommonLogger; run Rack::Directory.new(Dir.pwd) }\""
