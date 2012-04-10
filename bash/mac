@@ -3,4 +3,6 @@
 if [ `uname -s` == 'Darwin' ]; then
   alias ls='gls --color=auto'
   alias dircolors='gdircolors'
+else
+  alias ls='ls --color=auto'
 fi
