@@ -1,0 +1,17 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias h=history
+alias ls='ls --color'
+alias la='ls -lGa --color'
+alias ll='ls -lG --color'
+alias lt='ls -ltG --color'
+alias e=$EDITOR
+alias grep='grep --color'
+alias reload='. ~/.bashrc'
+
+# share a directory
+alias pshare="python -m SimpleHTTPServer 8000"
+alias rshare="ruby -rubygems -e \"['thin', 'rack', 'socket'].each {|file| require file };"\
+" Thin::Server.start(IPSocket.getaddress(Socket.gethostname), 7777) {"\
+" use Rack::CommonLogger; run Rack::Directory.new(Dir.pwd) }\""

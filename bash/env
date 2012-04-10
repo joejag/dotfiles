@@ -1,0 +1,6 @@
+export JAVA_HOME=/java
+export PATH=$PATH:~/bin:$JAVA_HOME/bin
+
+export EDITOR=vim
+export GIT_EDITOR=vim
+export HISTCONTROL=ignoredups
