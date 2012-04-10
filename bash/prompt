@@ -1,8 +1,9 @@
-GREENY="\[\e[0;32m\]"
-BOLD_GREENY="\[\e[1;32m\]"
-BLUEY="\[\e[1;34m\]"
-WHITEY="\[\e[1;37m\]"
+NORMAL_GREEN="\[\e[0;32m\]"
+BOLD_GREEN="\[\e[1;32m\]"
+BOLD_BLUE="\[\e[1;34m\]"
+BOLD_WHITE="\[\e[1;37m\]"
+
 END_COLOR="\[\e[m\]"
 
 # Green hostname, Blue absolute directory, $ prompt, White text
-PS1="${GREENY}\h${END_COLOR} ${BLUEY}\w${END_COLOR} ${BOLD_GREENY}\$${END_COLOR} $WHITEY"
+PS1="${NORMAL_GREEN}\h${END_COLOR} ${BOLD_BLUE}\w${END_COLOR} ${BOLD_GREEN}\$${END_COLOR} ${BOLD_WHITE}"
