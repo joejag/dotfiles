@@ -1,0 +1,4 @@
+# homebrew theme, Menlo 11pt
+#brew install coreutils
+alias ls='gls --color=auto'
+alias dircolors='gdircolors'

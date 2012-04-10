@@ -2,7 +2,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias h=history
-alias ls='ls --color'
 alias la='ls -lGa --color'
 alias ll='ls -lG --color'
 alias lt='ls -ltG --color'

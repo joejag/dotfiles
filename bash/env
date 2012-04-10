@@ -1,4 +1,4 @@
-export JAVA_HOME=/java
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export PATH=$PATH:~/bin:$JAVA_HOME/bin
 
 export EDITOR=vim
