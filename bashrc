@@ -1,4 +1,4 @@
-source ~/.dotfiles/bash/mac
+source ~/.dotfiles/bash/os_specific
 source ~/.dotfiles/bash/prompt
 source ~/.dotfiles/bash/env
 source ~/.dotfiles/bash/config
