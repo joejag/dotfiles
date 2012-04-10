@@ -2,6 +2,7 @@ GREENY="\[\e[0;32m\]"
 BOLD_GREENY="\[\e[1;32m\]"
 BLUEY="\[\e[1;34m\]"
 WHITEY="\[\e[1;37m\]"
-WRAPPER="\[\e[m\]"
+END_COLOR="\[\e[m\]"
 
-PS1="${GREENY}\h${WRAPPER} ${BLUEY}\w${WRAPPER} ${BOLD_GREENY}\$${WRAPPER} $WHITEY"
+# Green hostname, Blue absolute directory, $ prompt, White text
+PS1="${GREENY}\h${END_COLOR} ${BLUEY}\w${END_COLOR} ${BOLD_GREENY}\$${END_COLOR} $WHITEY"
