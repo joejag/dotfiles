@@ -3,6 +3,3 @@ eval $( dircolors -b $HOME/.dotfiles/bash/color/dir_colors )
 
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
-
-# Don’t clear the screen after quitting a manual page
-export MANPAGER="less -X"
