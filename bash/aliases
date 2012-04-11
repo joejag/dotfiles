@@ -18,7 +18,7 @@ alias grep='grep --color'
 # reload
 alias reload='. ~/.bashrc'
 
-# Sorted file sizes for current directory
+# File sizes for current directory
 alias ducks='du -cksh *' 
 
 # Show most commonly used commands
