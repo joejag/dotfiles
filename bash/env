@@ -3,4 +3,17 @@ export PATH=$PATH:~/bin:$JAVA_HOME/bin
 
 export EDITOR=vim
 export GIT_EDITOR=vim
-export HISTCONTROL=ignoredups
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Highlight section titles in manual pages
+ORANGE=$'\e[38;1;33m'
+export LESS_TERMCAP_md="$ORANGE"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+
+# output colors in less
+export LESS="-R"
