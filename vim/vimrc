@@ -1,3 +1,6 @@
+" Use Vim settings, rather then Vi settings (much better!).
+set nocompatible
+
 " Tabs are 2 characters
 set tabstop=2
 
@@ -6,6 +9,9 @@ set shiftwidth=2
 
 " spaces instead of tabs
 set expandtab
+
+" Always  set auto indenting on
+set autoindent
 
 " show line numbers
 set number
@@ -41,3 +47,6 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
+set statusline=%F\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
+set laststatus=2
