@@ -18,5 +18,9 @@ alias grep='grep --color'
 # reload
 alias reload='. ~/.bashrc'
 
-# File size
-alias fs="du -sh"
+# Sorted file sizes for current directory
+alias ducks='du -cksh * | sort -rn | head -11'
+
+# Show most commonly used commands
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
