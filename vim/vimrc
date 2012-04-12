@@ -1,44 +1,21 @@
-" Use Vim settings, rather then Vi settings (much better!).
-set nocompatible
+set nocompatible          " Use Vim settings, rather then Vi settings (much better!).
+set tabstop=2             " Tabs are 2 character
+set shiftwidth=2          " (Auto)indent uses 2 characters
+set expandtab             " spaces instead of tabs
+set autoindent            " Always set auto indenting on
+set number                " show line numbers
+set hlsearch              " highlight the searchterms
+set incsearch             " jump to the matches while typing
+set ignorecase            " ignore case while searching
+set history=50            " history
+set undolevels=1000       " 1000 undo levels
+set ruler                 " show a ruler
 
-" Tabs are 2 characters
-set tabstop=2
+syntax on                 " syntax highlight
+colorscheme vividchalk    " Color scheme selection
 
-" (Auto)indent uses 2 characters
-set shiftwidth=2
-
-" spaces instead of tabs
-set expandtab
-
-" Always  set auto indenting on
-set autoindent
-
-" show line numbers
-set number
-
-" highlight the searchterms
-set hlsearch
-
-" jump to the matches while typing
-set incsearch
-
-" ignore case while searching
-set ignorecase
-
-" history
-set history=50
-
-" 1000 undo levels
-set undolevels=1000
-
-" show a ruler
-set ruler
-
-" syntax highlight
-syntax on
-
-" Color scheme selection
-colorscheme vividchalk 
+set laststatus=2          " always show status line
+set statusline=%F\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%* " full path to file, location in file
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
@@ -48,5 +25,3 @@ autocmd BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
-set statusline=%F\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
-set laststatus=2
