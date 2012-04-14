@@ -1,23 +1,23 @@
 " General
-set nocompatible          " Use Vim settings, rather then Vi settings (much better!).
+set nocompatible            " Use Vim settings, rather then Vi settings (much better!).
 set background=dark 
 
-set history=50            " history
-set undolevels=1000       " 1000 undo levels
+set history=50              " history
+set undolevels=1000         " 1000 undo levels
 
 filetype plugin indent on   " Automatically detect file types.
-syntax on                 " syntax highlight
+syntax on                   " syntax highlight
 set mouse=a                 " automatically enable mouse usage
-set spell                       " spell checking on
+set spell                   " spell checking on
 
 " UI
-set showmode                    " display the current mode
-colorscheme vividchalk    " Color scheme selection
+set showmode                " display the current mode
+colorscheme vividchalk      " Color scheme selection
 
 if has('cmdline_info')
-    set ruler                   " show the ruler
+    set ruler               " show the ruler
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
-    set showcmd                 " show partial commands in status line and selected characters/lines in visual mode
+    set showcmd             " show partial commands in status line and selected characters/lines in visual mode
 endif
 
 if has('statusline')
@@ -72,8 +72,6 @@ endif
 " MISC
 
 " When editing a file, always jump to the last known cursor position.
-" Don't do it when the position is invalid or when inside an event handler
-" (happens when dropping a file on gvim).
 autocmd BufReadPost *
             \ if line("'\"") > 0 && line("'\"") <= line("$") |
             \   exe "normal g`\"" |
