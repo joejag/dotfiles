@@ -53,6 +53,10 @@ set pastetoggle=<F12>           " pastetoggle "    (sane indentation on pastes)
 " Key mappings
 let mapleader = ','             "The default leader is '\', but many people prefer ',' as it's in a standard location
 
+" Bubble single lines
+nmap <leader><Down> ddp
+nmap <leader><Up> ddkP 
+
 " Easier moving in tabs and windows
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
@@ -61,6 +65,10 @@ map <C-H> <C-W>h<C-W>_
 
 " Plugins
 map <C-e> :NERDTreeToggle<CR>
+map <leader>e :NERDTreeFind<CR>
+
+let NERDTreeShowBookmarks=0
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 
 " GVIM
 if has('gui_running')
@@ -69,6 +77,9 @@ if has('gui_running')
     set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
 endif
 
+" VimCasts advise
+
+
 " MISC
 
 " When editing a file, always jump to the last known cursor position.
@@ -76,4 +87,5 @@ autocmd BufReadPost *
             \ if line("'\"") > 0 && line("'\"") <= line("$") |
             \   exe "normal g`\"" |
             \ endif
+
 
