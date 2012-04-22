@@ -1,3 +1,7 @@
+" Pathogen loads plugins
+call pathogen#helptags() 
+call pathogen#runtime_append_all_bundles()
+
 " General
 set nocompatible            " Use Vim settings, rather then Vi settings (much better!).
 set background=dark 
@@ -7,8 +11,6 @@ set undolevels=1000         " 1000 undo levels
 
 filetype plugin indent on   " Automatically detect file types.
 syntax on                   " syntax highlight
-set mouse=a                 " automatically enable mouse usage
-set spell                   " spell checking on
 
 " UI
 set showmode                " display the current mode
@@ -52,6 +54,7 @@ set pastetoggle=<F12>           " pastetoggle "    (sane indentation on pastes)
 
 " Key mappings
 let mapleader = ','             "The default leader is '\', but many people prefer ',' as it's in a standard location
+nnoremap <Leader>u :GundoToggle<CR>
 
 " Bubble single lines
 nmap <leader><Down> ddp
@@ -80,9 +83,6 @@ if has('gui_running')
     set lines=40                " 40 lines of text instead of 24,
     set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
 endif
-
-" VimCasts advise
-
 
 " MISC
 
