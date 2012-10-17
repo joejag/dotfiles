@@ -67,7 +67,7 @@ map <C-L> <C-W>l<C-W>_
 map <C-H> <C-W>h<C-W>_
 
 " Format code while preserving cursor location
-map § gg=G``
+map § gg=G``zz
 
 " Plugins :: NerdTree
 map <C-e> :NERDTreeToggle<CR>
