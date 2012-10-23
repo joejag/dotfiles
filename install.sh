@@ -7,7 +7,7 @@ ln -sf ~/.dotfiles/vim ~/.vim
 ln -f ~/.dotfiles/vim/vimrc ~/.vimrc
 
 # TMUX
-ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 # Git Config
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
