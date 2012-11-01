@@ -11,3 +11,6 @@ ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 # Git Config
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
+
+# Ack config
+ln -sf ~/.dotfiles/ack/ackrc ~/.ackrc
