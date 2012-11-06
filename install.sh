@@ -14,3 +14,6 @@ ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 
 # Ack config
 ln -sf ~/.dotfiles/ack/ackrc ~/.ackrc
+
+# Gem config
+ln -sf ~/.dotfiles/gem/gemrc ~/.gemrc
