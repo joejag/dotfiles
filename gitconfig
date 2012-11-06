@@ -18,3 +18,10 @@
     added = yellow
     changed = green
     untracked = cyan
+[alias]
+    st = status -s
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
