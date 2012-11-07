@@ -10,7 +10,7 @@ ln -f ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 # Git Config
-ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/git/gitconfig ~/.gitconfig
 
 # Ack config
 ln -sf ~/.dotfiles/ack/ackrc ~/.ackrc
