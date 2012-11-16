@@ -5,6 +5,7 @@
     branch = auto
     diff = auto
     status = auto
+	ui = true
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -24,6 +25,6 @@
     br = branch
     co = checkout
     df = diff
-    lg = log --pretty=format:\"%h %ad | [%an] %s%d \" --date=short
+    lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 [core]
     excludesfile = /Users/joe/.dotfiles/git/gitignore
