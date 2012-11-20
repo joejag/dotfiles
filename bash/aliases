@@ -24,3 +24,5 @@ alias ducks='du -cksh *'
 # Show most commonly used commands
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
+# Search and replace
+alias rsar="ruby ~/.dotfiles/bash/scripts/search_and_replace.rb "
