@@ -96,7 +96,11 @@ let g:ctrlp_prompt_mappings = {
 if has('gui_running')
     set guioptions-=T           " remove the toolbar
     set lines=40                " 40 lines of text instead of 24,
-    set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
+    set guifont=Monaco\ for\ Powerline\ for\ Powerline:h12
+    
+    " PowerLine
+    set encoding=utf-8
+    let g:Powerline_symbols = 'fancy'
 endif
 
 " MISC
@@ -107,6 +111,3 @@ autocmd BufReadPost *
             \   exe "normal g`\"" |
             \ endif
 
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>

@@ -28,3 +28,5 @@
     lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 [core]
     excludesfile = /Users/joe/.dotfiles/git/gitignore
+[github]
+	user = joe@joejag.com
