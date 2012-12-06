@@ -56,6 +56,13 @@ set pastetoggle=<F12>           " pastetoggle "    (sane indentation on pastes)
 let mapleader = ','             "The default leader is '\', but many people prefer ',' as it's in a standard location
 nnoremap <Leader>u :GundoToggle<CR>
 
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
 " Bubble single lines
 nmap <leader><Down> ddp
 nmap <leader><Up> ddkP 
