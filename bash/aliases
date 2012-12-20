@@ -26,3 +26,6 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 
 # Search and replace
 alias rsar="ruby ~/.dotfiles/bash/scripts/search_and_replace.rb "
+
+# tmux with 256 colors
+alias tmux="TERM=screen-256color-bce tmux"
