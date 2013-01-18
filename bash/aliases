@@ -29,3 +29,9 @@ alias rsar="ruby ~/.dotfiles/bash/scripts/search_and_replace.rb "
 
 # tmux with 256 colors
 alias tmux="TERM=screen-256color-bce tmux"
+
+# Ruby aliases
+alias be="bundle exec "
+alias bers="bundle exec rspec "
+alias bera="bundle exec rake "
+
