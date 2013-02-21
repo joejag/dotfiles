@@ -25,6 +25,7 @@
     br = branch
     co = checkout
     df = diff
+    ready = rebase -i @{u}
     lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     standup = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --since yesterday --author joe
 [core]
