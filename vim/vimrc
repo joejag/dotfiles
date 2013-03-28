@@ -1,5 +1,5 @@
 " Pathogen loads plugins
-call pathogen#helptags() 
+call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 " General
@@ -111,9 +111,16 @@ endif
 
 " MISC
 
-" When editing a file, always jump to the last known cursor position.
-autocmd BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \   exe "normal g`\"" |
-            \ endif
-
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
