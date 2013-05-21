@@ -1,0 +1,3 @@
+tunlr_dns=`curl -s 'http://tunlr.net/tunapi.php?action=getdns&version=1&format=json' | jq '.dns1, .dns2' | awk '{printf("%s ",$0)}'`
+eval "sudo networksetup -setdnsservers Wi-Fi $tunlr_dns"
+sudo networksetup -getdnsservers Wi-Fi
