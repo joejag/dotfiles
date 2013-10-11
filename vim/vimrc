@@ -111,6 +111,9 @@ endif
 
 " MISC
 
+" Make - a keyword for completing css classes
+set iskeyword+=-
+
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
