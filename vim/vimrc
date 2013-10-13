@@ -114,6 +114,9 @@ endif
 " Make - a keyword for completing css classes
 set iskeyword+=-
 
+" Syntastic, ignore Angular JS HTML attributes
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
