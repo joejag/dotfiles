@@ -7,5 +7,3 @@ source ~/.dotfiles/bash/share
 
 source ~/.dotfiles/bash/completion/subversion
 source ~/.dotfiles/bash/completion/git
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

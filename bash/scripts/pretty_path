@@ -1,0 +1,1 @@
+echo $PATH | awk -F : '{print "PATH is set to\n++++++++++++++"} {for (i=1;i<=NF;i++) {print "["i"]",$i}}'

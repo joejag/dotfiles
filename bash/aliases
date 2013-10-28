@@ -38,3 +38,5 @@ alias bera="bundle exec rake "
 # Netflix DNS hackery
 alias uk_netflix="sudo sh ~/.dotfiles/bash/scripts/uk_netflix"
 alias us_netflix="sudo sh ~/.dotfiles/bash/scripts/us_netflix"
+
+alias pretty_path="sh ~/.dotfiles/bash/scripts/pretty_path"
