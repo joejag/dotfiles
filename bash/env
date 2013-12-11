@@ -1,6 +1,6 @@
 export SCALA_HOME=$HOME/dev/tools/scala-2.10.1/bin
 
-export PATH=/usr/local/heroku/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/heroku/bin:$PATH
 export PATH=$SCALA_HOME:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$PATH:$HOME/dev/tools/adt-bundle/sdk/platform-tools:$HOME/dev/tools/adt-bundle/sdk/tools
