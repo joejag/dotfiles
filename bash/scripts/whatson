@@ -1,0 +1,3 @@
+function whatson(){
+  lsof -iTCP:$1 -sTCP:LISTEN
+}
