@@ -5,6 +5,7 @@
 def start_session(dir, called)
   `tmux new-session -d -s #{@session_name} -n '#{called}'`
   basic_setup(dir)
+  send_keys('gitsh')
 end
 
 def new_paned_window(called)
