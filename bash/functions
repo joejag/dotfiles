@@ -1,5 +1,10 @@
 # Converts an image into a web suitable image. Vastly reduces size, while keeping a good enough quality
-function webize() { convert $1 -resize "600x" -unsharp 2x0.5+0.7+0 -quality 98 $1_web; }
+# Inspiration: https://even.li/imagemagick-sharp-web-sized-photographs/
+function webize() {
+  filename=$(basename $1)
+  convert $1 -resize "600x" -unsharp 2x0.5+0.7+0 -quality 98 ${filename%%.*}_web.jpg; 
+}
 
 # Given a port, it shows the details of the service running on it
-function whatson() { lsof -iTCP:$1 -sTCP:LISTEN }
+function whatson() { lsof -iTCP:$1 -sTCP:LISTEN; }
+function whatsonsudo() { sudo lsof -iTCP:$1 -sTCP:LISTEN; }
