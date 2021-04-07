@@ -39,7 +39,7 @@ echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
 echo "installing a few global npm packages"
-npm install --global tldr
+npm install --global tldr eslint
 
 echo "Installing Java via Jabba"
 curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
@@ -62,6 +62,15 @@ wget  -O $HOME/.zshrc https://raw.githubusercontent.com/joejag/dotfiles/main/.zs
 
 echo "cleaning up files"
 rm -rf awscli-bundle awscli-bundle.zip 
+
+###
+# VS Code
+###
+
+wget  -O "$HOME/Library/Application\ Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
+code --install-extension dbaeumer.vscode-eslint 
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.auto-rename-tag
 
 echo "making system modifications:"
 
