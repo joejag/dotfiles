@@ -26,10 +26,14 @@ echo "brew installing stuff"
 # imagemagick: eventually I will need this for something
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
-brew install git ripgrep imagemagick tree bat
+brew install git ripgrep imagemagick tree bat wget
+
+echo "Install oh my zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "installing node (via n-install)"
-curl -L https://git.io/n-install | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+. $HOME/.bash_profile
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
@@ -38,7 +42,7 @@ echo "installing a few global npm packages"
 npm install --global tldr
 
 echo "installing apps with brew cask"
-brew install --cask alfred google-chrome visual-studio-code vlc discord zoomus spotify slack iterm2
+brew install --cask alfred google-chrome visual-studio-code vlc discord zoom spotify slack iterm2
 
 echo "installing aws client"
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
