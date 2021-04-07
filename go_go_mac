@@ -63,20 +63,17 @@ wget  -O $HOME/.zshrc https://raw.githubusercontent.com/joejag/dotfiles/main/.zs
 echo "cleaning up files"
 rm -rf awscli-bundle awscli-bundle.zip 
 
-###
-# VS Code
-###
+echo "making system modifications:"
+
+###############################################################################
+# VS Code                                                                     #
+###############################################################################
 
 code --install-extension dbaeumer.vscode-eslint 
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-rename-tag
 mkdir -p "$HOME/Library/Application\ Support/Code/User"
 wget  -O "$HOME/Library/Application\ Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
-
-echo "making system modifications:"
-
-# Make Chrome Two finger swipe for back and forward
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool TRUE
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -104,6 +101,18 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 # Never go into computer sleep mode
 sudo systemsetup -setcomputersleep Off > /dev/null
+
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Make Chrome Two finger swipe for back and forward
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool TRUE
 
 ###############################################################################
 # Screen                                                                      #
