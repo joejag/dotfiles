@@ -31,26 +31,32 @@ brew install git ripgrep imagemagick tree bat wget
 echo "Install oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "installing node (via n-install)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-. $HOME/.bash_profile
-
+echo "installing node (via nvm)"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && . ~/.bash_profile
+nvm install node
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
 echo "installing a few global npm packages"
 npm install --global tldr
 
+echo "Installing Java via Jabba"
+curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+jabba install openjdk@1.11-0
+echo "java --version: $(java --version)"
+
 echo "installing apps with brew cask"
-brew install --cask alfred google-chrome visual-studio-code vlc discord zoom spotify slack iterm2
+brew install --cask alfred google-chrome visual-studio-code vlc discord zoom spotify slack iterm2 docker
 
 echo "installing aws client"
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
-echo "cloning dotfiles"
+echo "Setup Git"
 wget  -O $HOME/.gitconfig https://raw.githubusercontent.com/joejag/dotfiles/main/.gitconfig
+
+echo "Setup zsh preferences"
 wget  -O $HOME/.zshrc https://raw.githubusercontent.com/joejag/dotfiles/main/.zshrc
 
 echo "cleaning up files"
