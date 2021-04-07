@@ -26,7 +26,8 @@ echo "brew installing stuff"
 # imagemagick: eventually I will need this for something
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
-brew install git ripgrep imagemagick tree bat wget
+# z: Jumo around directories
+brew install git ripgrep imagemagick tree bat wget z
 
 echo "Install oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
