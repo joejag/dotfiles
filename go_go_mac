@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ~/.macos — https://mths.be/macos
+# Inspired from: ~/.macos — https://mths.be/macos
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -18,7 +18,6 @@ echo "mkdir -p ${HOME}/projects"
 mkdir -p "${HOME}/projects"
 
 echo "installing homebrew"
-# install homebrew https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "brew installing stuff"
@@ -72,8 +71,8 @@ echo "making system modifications:"
 code --install-extension dbaeumer.vscode-eslint 
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-rename-tag
-mkdir -p "$HOME/Library/Application\ Support/Code/User"
-wget  -O "$HOME/Library/Application\ Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
+mkdir -p "$HOME/Library/Application Support/Code/User"
+wget  -O "$HOME/Library/Application Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
 
 ###############################################################################
 # General UI/UX                                                               #
