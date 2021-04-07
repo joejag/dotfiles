@@ -1,8 +1,0 @@
-# share a directory with python
-alias pshare="python -m SimpleHTTPServer 8000"
-
-# share a directory with ruby
-alias rshare="ruby -rubygems -e \"['thin', 'rack', 'socket'].each {|file| require file };"\
-" Thin::Server.start(IPSocket.getaddress(Socket.gethostname), 7777) {"\
-" use Rack::CommonLogger; run Rack::Directory.new(Dir.pwd) }\""
-

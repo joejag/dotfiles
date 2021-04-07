@@ -1,9 +1,0 @@
-# homebrew theme, Menlo 11pt
-# brew install coreutils
-if [ `uname -s` == 'Darwin' ]; then
-  alias ls='gls --color=auto'
-  alias dircolors='gdircolors'
-  defaults write NSGlobalDomain KeyRepeat -int 0
-else
-  alias ls='ls --color=auto'
-fi

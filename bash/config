@@ -1,5 +1,0 @@
-# Turn on color scheme
-eval $( dircolors -b $HOME/.dotfiles/bash/color/dir_colors )
-
-# Append to the Bash history file, rather than overwriting it
-shopt -s histappend

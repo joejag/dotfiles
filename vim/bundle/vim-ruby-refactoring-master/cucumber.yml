@@ -1,3 +1,0 @@
-default: --format progress --tags ~@wip --tags ~@issues features
-wip: --tags @wip --wip features
-issues: --tags @issues --wip features
