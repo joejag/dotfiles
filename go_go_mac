@@ -67,10 +67,11 @@ rm -rf awscli-bundle awscli-bundle.zip
 # VS Code
 ###
 
-wget  -O "$HOME/Library/Application\ Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
 code --install-extension dbaeumer.vscode-eslint 
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-rename-tag
+mkdir -p "$HOME/Library/Application\ Support/Code/User"
+wget  -O "$HOME/Library/Application\ Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
 
 echo "making system modifications:"
 
