@@ -6,5 +6,6 @@
   "editor.formatOnSave": true,
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  "terminal.integrated.scrollback": 20000
+  "terminal.integrated.scrollback": 20000,
+  "explorer.confirmDelete": false
 }
