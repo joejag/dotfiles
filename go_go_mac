@@ -48,10 +48,13 @@ echo "installing aws client"
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
-rm awscli-bundle.zip
 
 echo "cloning dotfiles"
-wget  -O $HOME/.gitconfig https://raw.githubusercontent.com/joejag/dotfiles/master/.gitconfig
+wget  -O $HOME/.gitconfig https://raw.githubusercontent.com/joejag/dotfiles/main/.gitconfig
+wget  -O $HOME/.zshrc https://raw.githubusercontent.com/joejag/dotfiles/main/.zshrc
+
+echo "cleaning up files"
+rm -rf awscli-bundle awscli-bundle.zip 
 
 echo "making system modifications:"
 
