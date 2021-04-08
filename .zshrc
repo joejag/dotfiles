@@ -1,5 +1,5 @@
 # Oh My Zsh
-ZSH_DISABLE_COMPFIX=trueexport 
+ZSH_DISABLE_COMPFIX=true 
 ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git z)

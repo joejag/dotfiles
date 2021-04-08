@@ -25,11 +25,8 @@ echo "brew installing stuff"
 # imagemagick: eventually I will need this for something
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
-# z: Jumo around directories
+# z: Jump around directories
 brew install git ripgrep imagemagick tree bat wget z
-
-echo "Install oh my zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "installing node (via nvm)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && . ~/.bash_profile
@@ -55,9 +52,6 @@ sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 echo "Setup Git"
 wget  -O $HOME/.gitconfig https://raw.githubusercontent.com/joejag/dotfiles/main/.gitconfig
-
-echo "Setup zsh preferences"
-wget  -O $HOME/.zshrc https://raw.githubusercontent.com/joejag/dotfiles/main/.zshrc
 
 echo "cleaning up files"
 rm -rf awscli-bundle awscli-bundle.zip 
@@ -152,4 +146,14 @@ for app in "Activity Monitor" \
   "iCal"; do
   killall "${app}" &> /dev/null
 done
+
+###############################################################################
+# Zsh                                                                         #
+###############################################################################
+
+echo "Install oh my zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Setup zsh preferences"
+wget  -O $HOME/.zshrc https://raw.githubusercontent.com/joejag/dotfiles/main/.zshrc
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
