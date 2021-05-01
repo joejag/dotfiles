@@ -43,7 +43,7 @@ jabba install openjdk@1.11-0
 echo "java --version: $(java --version)"
 
 echo "installing apps with brew cask"
-brew install --cask alfred google-chrome visual-studio-code vlc discord zoom spotify slack iterm2 docker
+brew install --cask alfred google-chrome visual-studio-code vlc discord zoom spotify slack iterm2 docker httpie htop
 
 echo "installing aws client"
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
