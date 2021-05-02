@@ -22,4 +22,6 @@ export NVM_DIR=~/.nvm
 # Jabba
 export JABBA_HOME=~/.jabba
 [ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
+
+# Prefer the Homebrew Ruby over the default one
 export PATH="/usr/local/opt/ruby/bin:$PATH"
