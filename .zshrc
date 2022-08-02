@@ -1,27 +1,44 @@
-# Oh My Zsh
-ZSH_DISABLE_COMPFIX=true
-ZSH="$HOME/.oh-my-zsh"
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:~HOME/.npm-global/bin:~HOME/Development/Flutter/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-plugins=(git z)
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    git
+    zsh-autosuggestions
+    )
+
 source $ZSH/oh-my-zsh.sh
 
-# Aliases
-alias cat='bat'
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# Print out the latest log from Cloudwatch for a log group
-# e.g. For Lambda: alog "/aws/lambda/AdieuAPIStack-EmailsHandlerC69F2C27-OQYE2R1AK0SI"
-function alog {
-  LOG_GROUP=$1
-  aws logs get-log-events --log-group-name $LOG_GROUP --log-stream-name `aws logs describe-log-streams --log-group-name $LOG_GROUP --max-items 1 --order-by LastEventTime --descending --query 'logStreams[].logStreamName' --output text | head -n 1` --query 'events[].message' --output text
+# Example aliases
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
+alias cat="bat"
+
+timer() {
+    let "mins = $1 * 60" 
+    echo $mins
+    sleep $mins && osascript -e 'display notification "Times up" sound name "Ping"'
 }
-
-# NVM
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# Jabba
-export JABBA_HOME=~/.jabba
-[ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
-
-# Prefer the Homebrew Ruby over the default one
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+# works only with floating point numbers (percentage 79.0 100.0)
+percentage() {
+    if [[ $1 = "" ]]
+    then
+        echo "Ex. Usage: percentage 79.0 100.0"
+    else
+        let "percentage = $1 / $2 * 100" 
+        echo $percentage
+    fi
+}
