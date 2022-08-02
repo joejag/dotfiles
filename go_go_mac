@@ -26,7 +26,8 @@ echo "brew installing stuff"
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
 # z: Jump around directories
-brew install git ripgrep imagemagick tree bat wget z
+# git-credential-manager: needed for azure repos authentication
+brew install git ripgrep imagemagick tree bat wget z git-credential-manager
 
 echo "installing node (via nvm)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && . ~/.bash_profile
@@ -37,24 +38,12 @@ echo "npm --version: $(npm --version)"
 echo "installing a few global npm packages"
 npm install --global tldr eslint
 
-echo "Installing Java via Jabba"
-curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
-jabba install openjdk@1.11-0
-echo "java --version: $(java --version)"
-
 echo "installing apps with brew cask"
-brew install --cask alfred google-chrome visual-studio-code vlc discord zoom spotify slack iterm2 docker httpie htop
-
-echo "installing aws client"
-curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-unzip awscli-bundle.zip
-sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+brew install --cask google-chrome visual-studio-code vlc zoom docker
 
 echo "Setup Git"
-wget  -O $HOME/.gitconfig https://raw.githubusercontent.com/joejag/dotfiles/main/.gitconfig
-
-echo "cleaning up files"
-rm -rf awscli-bundle awscli-bundle.zip 
+brew install 
+wget  -O $HOME/.gitconfig https://raw.githubusercontent.com/saravanapriyanm/dotfiles/main/.gitconfig
 
 echo "making system modifications:"
 
@@ -62,38 +51,38 @@ echo "making system modifications:"
 # VS Code                                                                     #
 ###############################################################################
 
-code --install-extension dbaeumer.vscode-eslint 
-code --install-extension esbenp.prettier-vscode
-code --install-extension formulahendry.auto-rename-tag
-mkdir -p "$HOME/Library/Application Support/Code/User"
-wget  -O "$HOME/Library/Application Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
+# code --install-extension dbaeumer.vscode-eslint 
+# code --install-extension esbenp.prettier-vscode
+# code --install-extension formulahendry.auto-rename-tag
+# mkdir -p "$HOME/Library/Application Support/Code/User"
+# wget  -O "$HOME/Library/Application Support/Code/User/settings.json" https://raw.githubusercontent.com/joejag/dotfiles/main/vscode-settings.json
 
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
+# ###############################################################################
+# # General UI/UX                                                               #
+# ###############################################################################
 
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# # Set standby delay to 24 hours (default is 1 hour)
+# sudo pmset -a standbydelay 86400
 
-# Expand save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+# # Expand save panel by default
+# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
-# Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+# # Save to disk (not to iCloud) by default
+# defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+# # Disable the “Are you sure you want to open this application?” dialog
+# defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable the crash reporter
-defaults write com.apple.CrashReporter DialogType -string "none"
+# # Disable the crash reporter
+# defaults write com.apple.CrashReporter DialogType -string "none"
 
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+# # Reveal IP address, hostname, OS version, etc. when clicking the clock
+# # in the login window
+# sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+# # Never go into computer sleep mode
+# sudo systemsetup -setcomputersleep Off > /dev/null
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -154,6 +143,6 @@ done
 echo "Install oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "Setup zsh preferences"
-wget  -O $HOME/.zshrc https://raw.githubusercontent.com/joejag/dotfiles/main/.zshrc
+wget  -O $HOME/.zshrc https://raw.githubusercontent.com/saravanapriyanm/dotfiles/main/.zshrc
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
